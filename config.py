@@ -1,3 +1,7 @@
+# Cooking AI Bot - config
+# Version: 0.1.0
+...
+
 import os
 from dotenv import load_dotenv
 
