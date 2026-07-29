@@ -10,14 +10,13 @@ load_dotenv()
 # Telegram bot token
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
-# Deepseek API
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-DEEPSEEK_BASE_URL = "https://api.deepseek.com"
-DEEPSEEK_MODEL = "deepseek-chat"
+# Gemini API
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_MODEL = "models/gemini-3.6-flash"
 
 # Bot Settings
 MAX_MESSAGE_LENGTH = 4096
-MAX_RECIPES = 6
+MAX_RECIPES = 5
 REQUESTS_TIMEOUT = 30
 
 # Launch Validation
@@ -30,9 +29,9 @@ def validate_config():
         errors.append("TELEGRAM_TOKEN not installed. You should go to @BotFather!")
 
     if not DEEPSEEK_API_KEY:
-        errors.append("DEEPSEEK_API_KEY not installed in .env file")
+        errors.append("GEMINI_API_KEY not installed in .env file")
     elif DEEPSEEK_API_KEY.startswith("your_"):
-        errors.append("DEEPSEEK_API_KEY not installed. Go to api.deepseek.com!")
+        errors.append("GEMINI_API_KEY not installed. Go to https://aistudio.google.com/!")
 
     if errors:
         print("\n Config Error!")
