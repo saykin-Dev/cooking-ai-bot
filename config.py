@@ -28,9 +28,9 @@ def validate_config():
     elif TELEGRAM_TOKEN.startswith("your_"):
         errors.append("TELEGRAM_TOKEN not installed. You should go to @BotFather!")
 
-    if not DEEPSEEK_API_KEY:
+    if not GEMINI_API_KEY:
         errors.append("GEMINI_API_KEY not installed in .env file")
-    elif DEEPSEEK_API_KEY.startswith("your_"):
+    elif GEMINI_API_KEY.startswith("your_"):
         errors.append("GEMINI_API_KEY not installed. Go to https://aistudio.google.com/!")
 
     if errors:
